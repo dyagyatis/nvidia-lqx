@@ -11,8 +11,7 @@ pkgdesc="$_pkgdesc"
 arch=('x86_64')
 url="http://www.nvidia.com/"
 depends=('linux-lqx>=6.11.5' "nvidia-libgl" "nvidia-utils=${pkgver}")
-makedepends=('linux-lqx-headers>=4.12' 'linux-lqx-headers<4.13')
-conflicts=('nvidia-304xx-lqx' 'nvidia-340xx-lqx')
+makedepends=('linux-lqx-headers>=6.11.5')
 license=('custom')
 install=nvidia-lqx.install
 options=(!strip)
