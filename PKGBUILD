@@ -3,7 +3,7 @@
 # Contributor: Felix Yan <felixonmars@gmail.com>
  
 pkgname=nvidia-lqx
-pkgver=550.127
+pkgver=550.127.05
 _extramodules=extramodules-4.12-lqx
 pkgrel=1
 _pkgdesc="NVIDIA drivers for linux-lqx."
