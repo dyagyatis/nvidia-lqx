@@ -10,17 +10,15 @@ _pkgdesc="NVIDIA drivers for linux-lqx."
 pkgdesc="$_pkgdesc"
 arch=('x86_64')
 url="http://www.nvidia.com/"
-depends=('linux-lqx>=4.12' 'linux-lqx<4.13' "nvidia-libgl" "nvidia-utils=${pkgver}")
+depends=('linux-lqx>=6.11.5' "nvidia-libgl" "nvidia-utils=${pkgver}")
 makedepends=('linux-lqx-headers>=4.12' 'linux-lqx-headers<4.13')
 conflicts=('nvidia-304xx-lqx' 'nvidia-340xx-lqx')
 license=('custom')
 install=nvidia-lqx.install
 options=(!strip)
-source_i686=("http://us.download.nvidia.com/XFree86/Linux-x86/${pkgver}/NVIDIA-Linux-x86-${pkgver}.run")
-source_x86_64=("http://us.download.nvidia.com/XFree86/Linux-x86_64/${pkgver}/NVIDIA-Linux-x86_64-${pkgver}-no-compat32.run")
-md5sums_i686=('53039e5fe898d405f3ea1725751045b6')
-md5sums_x86_64=('0bee5889e14a653df35d6b9700363ff9')
-[[ "$CARCH" = "x86_64" ]] && _pkg="NVIDIA-Linux-x86_64-${pkgver}-no-compat32"
+source_x86_64=("http://us.download.nvidia.com/XFree86/Linux-x86_64/${pkgver}/NVIDIA-Linux-x86_64-${pkgver}.run")
+md5sums_x86_64=('04b8fb74fd67dcb54a9b57b5926422be')
+[[ "$CARCH" = "x86_64" ]] && _pkg="NVIDIA-Linux-x86_64-${pkgver}"
 
 prepare() {
     sh "${_pkg}.run" --extract-only
